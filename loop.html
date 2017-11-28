@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var num = 5;
+    var no1 = 1;
+    var no2 = 2;
+    switch (true) {
+        case 1 > 2:
+            document.write("First");
+            break;
+        case 1 < 2:
+            document.write("Second");
+            break;
+        case 1 == 2:
+            document.write("Third");
+            break;
+        default:
+            document.write("This is my Default value");
+    }
+
+    var arr = ["true", "false", "codekul", 'Melayer', 123, "123"];
+    document.write("For Loop");
+    for (i = 0; i < arr.length; i++) {
+        document.write("<br>" + arr[i]);
+        if (arr[i] == true) {
+            document.write("ok");
+        }
+    }
+    document.write("while loop");
+
+
+    var i = 0;
+    while (i <= 6) {
+        console.log("<br>Break : " + i);
+        if (i == 3) {
+            break;
+        }
+        i++;
+    }
+
+    for (i = 0; i < 10; i++) {
+        if (i === 3) {
+            continue;
+        }
+        console.log("continue : " + i);
+
+
+    }
+    k = 0;
+    do {
+        console.log("do while Loop : " + k);
+        k++;
+    } while (k <= 3);
+
+    arr.forEach(function(num) {
+        document.write("<br>Each Loop: " + num);
+    })
+
+    var obj = [
+        {
+            key: 1,
+            value: "one",
+        },
+        {
+            key: 2,
+            value: "two"
+        },
+        {
+            key: 3,
+            value: "three"
+        }
+    ]
+    for (var key in arr) {
+        document.write("<br>in Loop: " + key);
+    }
+    for (var val of arr) {
+        document.write("<br>of Loop: " + val);
+    }
+    for(let obj_val of obj){
+        document.write("<br>Object : "+obj_val.key+' '+obj_val.value);
+    }
+</script>
+
+</html>
