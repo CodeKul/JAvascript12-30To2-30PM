@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    var arr = new Array();
+    arr[0] = 'codekul';
+    arr[1] = 'melayer';
+    arr[2] = 'a';
+    arr[3] = true;
+    console.log(arr);
+
+    for (let k of arr) {
+        console.log(k);
+    }
+    var arr1 = [];
+    arr1[0] = 'codekul1';
+    arr1[1] = 'melayer1';
+    arr1[2] = 'aa';
+    arr1[3] = false;
+    console.log(arr1);
+
+
+    var push_arr = new Array();
+    push_arr.push("aaa");
+    push_arr.push("codekul");
+    push_arr.unshift("front");
+    push_arr.splice(1, 0, "some", "thing", "different", "some");
+
+    console.log(push_arr.length);
+    var store_opp = push_arr.concat(arr, arr1);
+
+    store_opp.pop();
+    store_opp.shift();
+    store_opp.splice(2, 5);
+    store_opp.reverse();
+    console.log(store_opp.sort(function(a, b) {
+        return a - b
+    }));
+    var myStr = store_opp.join(" $ ");
+    console.log(myStr);
+
+    var check_arr = ['123', "try", "one", "two", "one"]
+    console.log(check_arr.indexOf("one"));
+    console.log(check_arr.lastIndexOf("one"));
+    //  console.log(check_arr.find());
+
+
+    console.log(check_arr.map(x => x * 2));
+    console.log(Array.isArray(check_arr));
+
+    check_arr.forEach(function(num){
+            console.log(num);
+    })
+</script>
