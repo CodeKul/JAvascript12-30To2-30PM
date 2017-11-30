@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <div id="myTime">
+        
+    </div>
+</body>
+</html>
+<script>
+    var myTime = document.getElementById("myTime");
+var new_date = new Date();
+/*document.write("<br>"+new_date);
+document.write("<br>"+new_date.getDate());
+document.write("<br>"+new_date.getFullYear());
+document.write("<br>"+new_date.getMonth());
+document.write("<br>"+new_date.getDay());
+document.write("<br>"+new_date.getHours());
+document.write("<br>"+new_date.getMilliseconds());
+document.write("<br>"+new_date.toLocaleDateString());
+document.write("<br>"+new_date.toLocaleString()); 
+document.write("<br>"+new_date.toLocaleTimeString()); */  
+
+function gettime(){
+var now = new Date();
+var hr = now.getHours();
+var min = now.getMinutes();
+var sec = now.getSeconds();
+myTime.innerHTML = "Hr : "+hr+" Min : "+min+" Sec : "+sec ;
+}
+
+setInterval("gettime()",100);
+localStorage.setItem("key2","123");
+localStorage.setItem("key1","456");
+console.log(localStorage.getItem("key1"));
+</script>
