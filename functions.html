@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+</body>
+</html>
+<script>
+    
+
+function display(){
+    document.write("Displaying content");
+}
+display();
+
+function add(num1, num2){
+    document.write("<br>addition : "+(num1+num2));
+}
+
+function sub(num1, num2){
+   return (num1-num2);
+}
+add(25,60);
+var result = sub(30,3);
+document.write("<br>subtraction : "+result);
+document.write("<br>subtraction : "+sub(25,5));
+    
+function deafult1(name="codekul",address="KarveRoad")
+{
+   document.write("<br>Name : "+ name +" Address : "+ address);      
+}
+deafult1();
+deafult1("Melayer");
+deafult1("Melayer","swargate");
+    
+var var_fun = function(){
+    document.write("<br> This is My Variable function");
+}
+var_fun();
+
+var another_fun = function myFun(){
+    document.write("<br> This is My Variable function with function name");
+}
+//myFun(); error undefined
+another_fun();
+    
+var cube = function(num="2"){
+    return (num*num*num);
+}
+document.write("<br>Cube is : "+cube());
+    
+var arrow_fun = (num1,num2) => (num1%num2);
+
+console.log(`Modules : ${arrow_fun(30,4)}`);
+    
+let fn2 = (num1, num2) => {
+    let swp = num1
+    num1 = num2
+    num2 = swp
+    return `Swiped Nums are ${num1} and ${num2}`
+}
+
+console.log(`Output of fn2 is ${fn2(15, 60)}`)
+</script>

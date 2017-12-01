@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+    article > div{
+        height: 50px;
+        width: 50px;
+        background: #000;
+        margin: 5px;
+        cursor: pointer;
+    }
+    </style>
+</head>
+
+<body>
+<article>
+    
+    
+</article>
+</body>
+</html>
+<script>
+
+/*for(let i=0;i<10;i++){
+    var box = document.createElement('div');
+    box.onclick = function(){
+        console.log("click Count : "+i);
+    }
+    document.getElementsByTagName('article')[0].appendChild(box);
+}
+for(var j=0;j<5;j++){
+    console.log(j);
+}*/
+
+var arr1 = ["one","two","three"];
+var arr2 = ["a","b","c","d"];
+var arr3 = ["mix","array",...arr1,...arr2];
+console.log(...arr3);
+
+</script>
