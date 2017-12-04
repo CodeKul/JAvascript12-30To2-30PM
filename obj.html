@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    
+</body>
+</html>
+<script>
+    
+var car = {
+    engine : 2,
+    color : "red",
+    arr: ["one","two","three"],
+    display() { 
+        console.log("this is car function");
+    }
+}
+
+console.log(car.engine);
+console.log(car['engine']);
+car.display();
+console.log(car.arr[0]);
+
+console.log("Addition : "+add(10,20));
+    
+var json_obj = {
+    "key": "value",
+    "key1" : "value1",
+    obj2 : {
+        "obj2": "value2",
+        "obj3":"value3"
+    },
+    arr: ["1","2","3"]
+}
+
+console.log(json_obj.key);
+console.log(json_obj.obj2.obj2);
+    
+var normal_obj = {};
+    normal_obj.name = "codekul";
+    normal_obj.something = "something";
+    normal_obj.dis = function(){
+        console.log("dirsct Object");
+    }
+    normal_obj.dis();
+   
+var name = "codekul";
+    var address = "karve Road";
+    
+var my_obj = {
+    name,address,
+    add = (num1,num2) =>(num1+num2);
+}
+ 
+my_obj.add(10,20);
+</script>
