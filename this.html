@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    
+</body>
+</html>
+<script>
+/*var person = {
+    name : "codekul",
+    moves : ["running","fighting","flying"],
+    displayMoves:function(){
+      var that = this; 
+        console.log(that);
+       this.moves.forEach(function(move){
+            var string = that.name+ "is"+move+"towards Enemy";
+            console.log(string);
+        });
+    }
+}
+
+var person = {
+    name : "codekul",
+    moves : ["running","fighting","flying"],
+    displayMoves:function(){
+       this.moves.forEach(function(move){
+            var string = this.name+ "is"+move+"towards Enemy";
+            console.log(string);
+        }.bind(this));
+    }
+}*/
+
+var person = {
+    name : "codekul",
+    moves : ["running","fighting","flying"],
+    displayMoves(){
+       this.moves.forEach(move => {
+            var string = this.name+ " is "+ move +"towards Enemy";
+            console.log(string);
+        });
+    }
+}
+
+person.displayMoves();
+    
+</script>

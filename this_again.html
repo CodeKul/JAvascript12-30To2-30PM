@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //    var name;
+    //function fun(para_name){
+    //    console.log(arguments.length);
+    //    this.name = para_name;
+    //    console.log(name);
+    //}
+    //fun("codekul");
+
+    var class_name;
+    var address;
+
+    var MyClass = {
+        class_name,
+        address,
+        class_fun: function(class_name, address) {
+            this.class_name = class_name;
+            this.address = address;
+            console.log(this);
+        },
+        dis: function() {
+            console.log("name : " + this.class_name);
+            console.log("address :" + this.address);
+        }
+    }
+    MyClass.class_fun("codekul", "Karve Road");
+    MyClass.dis();
+    
+    
+</script>
