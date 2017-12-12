@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
-        .myclass{
-            background-color: lightpink;
+        .myclass {
+            background-color: red;
             height: 150px;
             width: 150px;
-            border:1px solid darkblue;
+            border: 1px solid darkblue;
         }
     </style>
 </head>
 
 <body>
     <div id="myId" class="myclass">
-        
+
     </div>
     <button type="button" id="btn">show Me</button>
 </body>
+
 </html>
 
 
 <script>
-var btn = document.getElementById("btn");
-var myId = document.getElementById("myId");
+    var btn = document.getElementById("btn");
+    var myId = document.getElementById("myId");
     console.log(myId)
-    btn.onclick = function(eve){
-        if(myId.className == 'myclass')
-            {
-                myId.style.background = "aqua";
-                
-            }
-            else{
-                myId.className = '';
-            }
+    btn.onclick = function(eve) {
+        console.log(eve);
+        if(myId.style.backgroundColor == "red")
+        {
+//            eve.target.style.background = "aqua";
+        myId.style.backgroundColor = "aqua";
+        }else
+        {
+            myId.style.backgroundColor = "red";
+        }
     }
 </script>

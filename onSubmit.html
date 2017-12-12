@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <form method="get" action="#">
+        <input type="text">
+        <input type="email">
+        <input type="password">
+        <input type="submit" value="submit" id="myId">
+    </form>
+</body>
+</html>
+<script>
+var form = document.getElementsByTagName("form")[0];
+var myId = document.getElementById("myId");
+    form.onsubmit = function(e){
+        e.preventDefault();
+        console.log(e);
+    }
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        div{
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+            border:1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        This is mouse events
+    </div>
+</body>
+</html>
+<script>
+var div = document.getElementsByTagName("div")[0];
+//console.log(div);
+    div.onmousemove = function(eve){
+        console.log(eve);
+        div.innerHTML = "X Co-ordinate : "+eve.clientX + "Y Co-ordinate : " +eve.clientY;
+    }
+    
+    div.onmouseover = function(eve){
+        eve.target.style.backgroundColor = "lightgreen";
+    }
+    div.onmouseout = function(e){
+        e.target.style.backgroundColor = "lightpink";
+    }
+</script>
