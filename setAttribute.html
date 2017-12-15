@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+    #myID {
+        height: 300px;
+        width: 500px;
+        background-color: aqua;
+        border:2px solid black;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, culpa magnam consequatur amet quo quia officiis quas, nisi, fugiat quasi sit! Voluptatem quo dolorum molestias ex explicabo, labore. Repellat numquam blanditiis illo minima labore perspiciatis est earum tempora aliquam at. Pariatur excepturi, harum quaerat beatae numquam mollitia esse voluptatibus optio!
+    </div>
+    <input type="button" id="btn" value="Apply Style">
+</body>
+</html>
+<script>
+var btn = document.getElementById("btn");
+var div = document.getElementsByTagName("div")[0];
+    btn.addEventListener("click",function(){
+        btn.setAttribute("value","Style Applied");
+        div.setAttribute("id","myID");
+    })
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body bgcolor="aqua">
+    <img src="https://getbootstrap.com/assets/img/bootstrap-stack.png" id="btn" height="500" width="500">
+    <button type="button" id="cls">Close Image</button>
+</body>
+</html>
+<script>
+var btn = document.getElementById("btn");
+var cls = document.getElementById("cls");
+var cls_img;
+    btn.onclick = function(){
+      cls_img = window.open(this.src,"My Img",'height=500,width=500,resizable=yes,scrollbars=yes');
+        /*cls_img.moveTo(250,250);
+        cls_img.moveBy(500,500);
+      
+        cls_img.resizeBy(-200,-200); */
+        cls_img.resizeTo(window.screen.availWidth/2,window.screen.availHeight/2);
+         cls_img.focus();
+    }
+    cls.onclick = function(){
+        cls_img.close();
+    }
+var ht = window.screen.height;
+var wt = window.screen.width; 
+var height = window.screen.availHeight;
+var width = window.screen.availWidth;
+var px = window.screen.colorDepth;
+var clr = window.screen.pixelDepth;
+console.log(height,width);
+console.log(ht,wt);
+console.log(px,clr);
+
+</script>
