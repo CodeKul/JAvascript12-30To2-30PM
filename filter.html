@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    
+</body>
+</html>
+<script>
+//First Way ti call filter
+[1,2,3,4,5].filter(isEven)
+function isEven(ele){
+    return ele%2 == 0;
+}
+var dis = [1,2,3,4,5].filter(isEven);
+    document.write(dis);
+console.log([1,2,3,4,5].filter(isEven));
+    
+    
+//    second way to call filter
+     console.log([1,2,3,4,5,6,7,8,9].filter(function(ele,index,array){
+         console.log(ele+" :: "+index+" :: "+array);
+         return ele%2 == 0;
+     }));
+
+</script>

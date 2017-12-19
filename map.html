@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    
+</body>
+</html>
+<script>
+var dis = [2,4,6].map(function(ele,index,array){
+    console.log(ele+" :: "+index+" :: "+array);
+    return ele*ele;
+});
+document.write(dis);
+    
+function cube(ele){
+    return ele*ele*ele;
+}
+var cube_val = [2,4,6].map(cube);
+    document.write("<br>"+cube_val);
+
+
+
+</script>

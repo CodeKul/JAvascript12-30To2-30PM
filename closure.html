@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    
+</body>
+</html>
+<script>
+
+function stepTwo(start,step)
+    {
+        return function(){
+            var res = start;
+            start = start+step;
+            return res;
+        }
+    }
+var first = stepTwo(0,2);
+    console.log(first);
+    console.log(first());
+    console.log(first());
+    console.log(first());
+    console.log(first());
+    
+    
+
+
+</script>
