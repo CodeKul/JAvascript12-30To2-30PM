@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    
+</body>
+</html>
+<script>
+    
+/*function circle(r){
+        this.radius = r;
+        this.area = function(){
+            return (Math.PI*this.radius*this.radius);
+        }
+    }
+    
+    var cr = new circle(4);
+ 
+    console.log(cr.area());
+    circle.prototype.perimeter = function(){
+        return (2*Math.PI*this.radius);
+    }
+    console.log(cr.perimeter());
+       console.log(cr);*/
+    
+    function shape(){
+        this.area = function(){
+            return "this should be implimented";
+        }
+    }
+    
+    function sqr(length){
+        this.length = length;
+        this.area = function(){
+            return (this.length*this.length);
+        }
+    }
+    
+    function rect(hei,wid)
+    {
+        this.hei = hei;
+        this.wid = wid;
+        this.area = function(){
+            return (this.hei*this.wid);
+        }
+    }
+    rect.prototype = new shape();
+    sqr.prototype = new shape();
+    console.log(new sqr(5).area());
+      console.log(new rect(5,5).area());
+
+
+</script>

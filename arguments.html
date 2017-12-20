@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameters</title>
+</head>
+
+<body>
+    
+</body>
+</html>
+<script>
+/*function sum(){
+    console.log(arguments);
+    res = 0;
+    for(var i=0;i<arguments.length;i++){
+        res = res+arguments[i];
+    }
+    return res;
+}
+*/
+function sum(){
+    var args = Array.prototype.slice.call(arguments);
+    return args.reduce(function(prev,curr){
+        return (prev+curr);
+    })
+}
+console.log(sum(2,4,"s"));
+</script>

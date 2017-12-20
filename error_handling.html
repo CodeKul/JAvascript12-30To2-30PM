@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    
+</body>
+</html>
+<script>
+function sum(){
+    debugger;
+    var args = Array.prototype.slice.call(arguments);
+    return args.reduce(function(prev,curr){
+        if(!isNaN(curr)){
+            return (prev+curr);
+        }
+        else{
+            throw Error("This is not a number : "+curr);
+        }  
+    });
+}
+console.log(sum(2,4,"s"));
+    
+/*function ok(){
+    sum(2,4,"s");
+    console.log("try this");
+}
+ok();*/
+    
+function another(){
+    try{
+        sum(2,4,"s");
+    }
+    catch(error){
+        console.log(error)
+    }
+    console.log("try this");
+}
+    another();
+</script>
