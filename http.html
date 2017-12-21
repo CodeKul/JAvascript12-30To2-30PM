@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    /*function handleSuccess () { 
+      console.log( this.responseText ); 
+      const data = JSON.parse( this.responseText ); // convert data from JSON to a JavaScript object
+    console.log( data );
+    }
+    function handleError () { 
+      console.log( 'An error occurred \uD83D\uDE1E' );
+    }
+    const asyncRequestObject = new XMLHttpRequest();
+    asyncRequestObject.open('GET', 'https://unsplash.com');
+    asyncRequestObject.onload = handleSuccess;
+    asyncRequestObject.onerror = handleError;
+    asyncRequestObject.send();*/
+
+
+
+    const xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", "https://www.abcxyz.com");
+    xmlhttp.onload = function() {
+        if (xmlhttp.status == 200) {
+            var data = JSON.parse(this.responseText);
+            console.log(data);
+            var child = document.createElement("h1");
+            var body = document.body;
+            child.innerHTML = data.data.first_name;
+            body.appendChild(child);
+        }
+        else if(xmlhttp.status == 401){
+            
+        }
+
+
+    }
+    xmlhttp.onerror = function() {
+        console.log("Error");
+    }
+    xmlhttp.send();
+</script>

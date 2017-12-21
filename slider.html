@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body onload="load();">
+    <h1></h1>
+    <div id="image_canvas" style="margin: 0 auto;width: 950px;height: 550px;">
+        <img style="width: 100%;height: 100%">
+    </div>
+</body>
+</html>
+<script>
+/*var pictres = [
+  "https://static.pexels.com/photos/290348/pexels-photo-290348.jpeg",
+  "https://static.pexels.com/photos/380954/pexels-photo-380954.jpeg",
+  "https://static.pexels.com/photos/461185/pexels-photo-461185.jpeg",
+  "https://static.pexels.com/photos/683499/pexels-photo-683499.jpeg",
+  "https://static.pexels.com/photos/221059/pexels-photo-221059.jpeg"
+];
+    function load(){
+        changePic(0);
+    }
+    function changePic(n){ document.getElementById("image_canvas").getElementsByTagName("img")[0].src = pictres[n%pictres.length];
+        console.log(n%pictres.length);
+        setTimeout(function(){
+            changePic(n+1);
+        },3000);
+    }*/
+    
+ var pictures = [];
+    function load(){
+        getPictures();
+    }
+    
+    function getPictures(){
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET","pictures.json",true);
+        xmlHttp.onload = function(event){
+            if(xmlHttp.status == 200){
+                pictures = JSON.parse(xmlHttp.responseText);
+                console.log(pictures);
+                changePic(0);
+            }
+            else if(xmlHttp.status == 401){   
+            }  
+        }
+        xmlHttp.onerror = function(event){
+            alert("an Error has occured");
+        }
+        xmlHttp.send();
+    }
+    function changePic(n){
+        document.getElementById("image_canvas").getElementsByTagName("img")[0].src = pictres[n%pictres.length];
+        setTimeout(function(){
+            changePic(n+1);
+        },1000);
+    }
+    
+    
+
+</script>
