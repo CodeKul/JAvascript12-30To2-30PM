@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    
+</body>
+</html>
+<script>
+let carOne = { make: "honda"};
+let carTwo = { make: "Audi"};
+
+
+let carAge = new Map();
+    carAge.set(carOne,3);
+    carAge.set(carTwo,5);
+    console.log(carAge);
+
+    
+let cars = new Map();
+    cars.set("carOne","honda");
+    cars.set("casTwo","audi");
+    cars.set("carThree","bmw");
+    cars.set("carFour","xyz");
+    
+    for(let [key,value] of cars){
+        console.log(`${key} = ${value}`);
+    }
+    let person = {
+        name: "aab",
+        address : "pqr"
+    }
+    /*for(let per of person){
+        console.log(per);
+    }*/
+    
+    let arr = [1,2,3,4];
+    console.log(typeof arr[Symbol.iterator]);
+    console.log(typeof person[Symbol.iterator]);
+    
+  let personOne = { };
+    let personTwo = { };
+    let people = new WeakMap();
+    console.log(people.set(personTwo,"one")); 
+    console.log(people.set(personOne,"two"));
+    console.log(people.get(personTwo));
+    console.log(people.get(personOne));
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <input list="languages">
+    <datalist id="languages">
+    <option>Html</option>
+    <option>Css</option>
+    <option>Jquery</option>
+    <option>Javascript</option>
+    <option>Bootstrap</option>
+    </datalist>
+    <input type="time">
+    <input type="datetime-local">
+</body>
+</html>
+<script>
+let cars = new Set();
+    cars.add("one");
+    cars.add("two");
+    cars.add("Three");
+console.log(cars.size);
+    for(let car of cars){
+        console.log(car);
+    }
+    let [a,b,c] = cars;
+    console.log(a,b,c);
+    
+    let weakCars = new WeakSet();
+    weakCars.add({driver : 'audi'});
+    let passanger = {passanger : 'abc'};
+    weakCars.add(passanger);
+    console.log(weakCars.has(passanger));
+    weakCars.delete(passanger);
+    
+</script>
